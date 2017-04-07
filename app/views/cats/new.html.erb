@@ -1,0 +1,16 @@
+<div class="main">
+  <div class="container">
+   
+    <h2>Here you will add another cat</h2>
+
+    <%= form_for :cat, url: cats_path  do |c| %>
+    <div class="field">
+      <p><b>Cat's name: </b> <%= c.text_area :name %></p>
+      <p><b>Cat's breed: </b> <%= c.text_area :breed %></p>
+      <p><b>Cat's age: </b><%= c.text_area :age %></p>
+    </div>
+    <%= c.submit %>
+    <% end %>
+
+  </div>
+</div>

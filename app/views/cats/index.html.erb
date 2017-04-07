@@ -1,0 +1,33 @@
+<div class="main">
+  <div class="container">
+    
+    <h2>CRUD Cats</h2>
+    <table>
+    	<tr>
+    		<th><%= button_to "Create new cats", cats_new_path, method: :get %>
+    		</th>
+    		<th> <%= button_to "Inicial page", welcome_path, method: :get %>
+    		</th>
+
+		</tr>
+    </table>
+    
+
+    <br>
+    <% @cat.each do |c| %>
+
+    <div class="message"> 
+	  <p class="content"><b>Name: </b> <%= c.name %></p> 
+	  <p class="content"><b>Breed: </b> <%= c.breed %></p>
+	  <p class="content"><b>Age: </b> <%= c.age %></p> 
+	  <p class="time"><%= c.created_at %></p>
+	   <%= link_to "Show", :action => :show, :id => c.id %>
+	   <%= link_to "Edit", :action => :edit, :id => c.id %>
+	   <%= link_to "Delete", cats_destroy_path(c), method: :delete, data: {confirm: 'Are you sure?'} %> 
+	   <hr/>
+	</div>
+
+    <% end %>
+    
+  </div>
+</div>

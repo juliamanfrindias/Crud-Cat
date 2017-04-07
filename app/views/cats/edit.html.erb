@@ -1,0 +1,30 @@
+<div class="main">
+  <div class="container">
+    
+    <h2>Editing de choosed cat: </h2>
+    
+
+    <%= form_for :cat, :url => cats_update_path(@cat), :method => :put  do |c| %> 
+
+      <p>
+	    <b>Cat's name: </b>
+	    <%= c.text_area :name %>
+
+	  </p>
+
+	  <p>
+	    <b>Cat's breed: </b>
+	    <%= c.text_area :breed %>
+	  </p>
+
+	  <p>
+	    <b>Cat's age: </b> 
+	    <%= c.text_area :age %>
+	  </p>
+
+	  <%= c.submit %>
+    <% end %>
+   	<br>
+    <%= link_to "Come Back", cats_path %>
+  </div>
+</div>

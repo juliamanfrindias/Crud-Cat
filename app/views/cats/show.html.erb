@@ -1,0 +1,17 @@
+<div class="main">
+  <div class="container">
+    
+    <h2>Showing de choosed cat: </h2>
+    
+
+    <div class="message"> 
+	  <p class="content"><b>Cat's name: </b> <%= @cat.name %></p> 
+	  <p class="content"><b>Cat's breed: </b> <%= @cat.breed %></p>
+	  <p class="content"><b>Cat's age: </b> <%= @cat.age %></p> 
+	  <p class="time"><%= @cat.created_at %></p>
+	 </div>
+
+   
+    <%= link_to "Come Back", cats_path %>
+  </div>
+</div>
